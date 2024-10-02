@@ -9,7 +9,7 @@ Você precisa construir um sistema gerenciador de tarefas, onde você poderá ca
 
 Essa lista de tarefas precisa ter um CRUD, ou seja, deverá permitir a você obter os registros, criar, salvar e deletar esses registros.
 
-A sua aplicação deverá ser do tipo Web API ou MVC, fique a vontade para implementar a solução que achar mais adequado.
+A sua aplicação deverá ser do tipo Web API ou MVC, fique à vontade para implementar a solução que achar mais adequada.
 
 A sua classe principal, a classe de tarefa, deve ser a seguinte:
 
@@ -18,17 +18,13 @@ A sua classe principal, a classe de tarefa, deve ser a seguinte:
 Não se esqueça de gerar a sua migration para atualização no banco de dados.
 
 ## Métodos esperados
-É esperado que você crie o seus métodos conforme a seguir:
-
+É esperado que você crie os seus métodos conforme a seguir:
 
 **Swagger**
 
-
 ![Métodos Swagger](swagger.png)
 
-
 **Endpoints**
-
 
 | Verbo  | Endpoint                | Parâmetro | Body          |
 |--------|-------------------------|-----------|---------------|
@@ -41,7 +37,7 @@ Não se esqueça de gerar a sua migration para atualização no banco de dados.
 | GET    | /Tarefa/ObterPorStatus  | status    | N/A           |
 | POST   | /Tarefa                 | N/A       | Schema Tarefa |
 
-Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem
+Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que exigirem:
 
 ```json
 {
@@ -53,6 +49,16 @@ Esse é o schema (model) de Tarefa, utilizado para passar para os métodos que e
 }
 ```
 
-
 ## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima. **Os métodos ausentes foram implementados conforme esperado.**
+
+## Padrão MVC
+O padrão MVC (Model-View-Controller) é uma arquitetura de software que separa a aplicação em três componentes principais:
+
+1. **Model (Modelo)**: Representa a estrutura dos dados da aplicação e a lógica de negócios. É responsável por acessar e manipular os dados, geralmente interagindo com o banco de dados.
+
+2. **View (Visão)**: É a camada responsável pela apresentação dos dados ao usuário. Ela exibe a interface gráfica e os dados fornecidos pelo Model, permitindo a interação do usuário.
+
+3. **Controller (Controlador)**: Atua como um intermediário entre o Model e a View. Ele recebe as entradas do usuário através da View, processa essas entradas (geralmente chamando métodos no Model), e retorna os resultados para a View.
+
+Essa separação de responsabilidades facilita a manutenção e escalabilidade da aplicação, permitindo que cada componente seja desenvolvido e atualizado de forma independente.
